@@ -1,0 +1,408 @@
+@font-face {
+    src: url("../fonts/OpenSans-Bold.ttf");
+    font-family: "OpenSans Bold";
+}
+
+@font-face {
+    src: url('../fonts/BellotaText-Regular.ttf');
+    font-family: "BellotaText";
+}
+
+@font-face {
+    src: url('../fonts/BellotaText-Bold.ttf');
+    font-family: "BellotaText Bold";
+}
+
+@font-face {
+    src: url("../fonts/OpenSans-Regular.ttf");
+    font-family: "OpenSans Regular";
+}
+
+@font-face {
+    src: url("../fonts/OpenSans-Italic.ttf");
+    font-family: "OpenSans Italic";
+}
+
+@font-face {
+    src: url("../fonts/OpenSans-Light.ttf");
+    font-family: "OpenSans Light";
+}
+
+body {
+    margin: 0;
+    background-color: #E6E7E8;
+}
+/*СТИЛИ ДЛЯ ШАПКИ - меньше 360px*/
+.gradient { /*Общий контейнер для всех элементов шапки*/
+    margin: 0;
+    padding: 20px 0 0 20px;
+    height: 280px;
+    width: 100%; 
+    display: flex;
+    justify-content: space-between;
+    box-sizing: border-box;
+
+    position: relative;
+
+    /*Свойства градиента*/
+    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    background-repeat: no-repeat;
+    background-size: auto 72%;
+
+    background-color: #E6E7E8;
+}
+
+.logo-bg {/*Контейнер для логотипа*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    width: 90px;
+    height: 90px;
+    margin: 0;
+    padding: 0px;
+
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.logo { /*Стили для логотипа*/
+    background-color: #ffffff;
+    margin: 0;
+    padding: 13px;
+    width: 72px;
+    height: 72px;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+.photo-bg {/*Контейнер для фото*/
+    width: 160px;
+    height: 160px;
+    margin: 0;
+    padding: 0px;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    position: absolute; /*Позиционирование фото относительно общего контейнера шапки*/
+    top: 120px;
+    left: 40px;
+
+    border: 1px solid #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+.photo { /*Стили для фото*/
+    margin: 0;
+    padding: 10px;
+    width: 140px;
+    height: 140px;
+    
+    background-color: #ffffff;
+    border-radius: 50%;
+    box-sizing: border-box;
+}
+
+h1 { /*"Смирнова Юлия Анатольевна"*/
+    font-family: "OpenSans Light", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    font-size: 30px;
+    line-height: 35px  
+}
+h2 {
+    font-family: "OpenSans Light", Arial, Helvetica, sans-serif;
+    color: #ffffff;
+    text-align: right;
+    margin: 0;
+    padding: 0;
+    font-size: 14px;
+}
+
+.my-name {
+ margin: 0;
+ padding: 0;
+ width: 200px;
+ display: flex;
+
+}
+.my-name__bracket {
+    margin: 0 20px 0 0;
+    width: 15px;
+    height: 160px;
+    border-bottom: 1px solid #ffffff;
+    border-top: 1px solid #ffffff;
+    border-right: 1px solid #ffffff;
+}
+
+.my-name__title {
+    margin: 0;
+    padding: 0;
+}
+
+
+@media (min-width: 361px) { /*для 361 и больше, т.е. до 601*/ 
+    .gradient { /*361-601 Фон шапки*/
+        padding: 30px 0 0 30px;
+        height: 400px;
+    }
+
+    .logo-bg { /*361-601 Контейнер для логотипа*/
+        width: 100px;
+        height: 100px;
+    }
+
+    .logo { /*361-601 Стили для логотипа*/
+        padding: 14px;
+        width: 80px;
+        height: 80px;
+    }
+
+    .photo-bg {/*361-601 Контейнер для фото*/
+        width: 250px;
+        height: 250px;
+
+        position: absolute; /*Позиционирование фото относительно общего контейнера шапки*/
+        top: 150px;
+        left: 40px;
+    }
+
+    .photo { /* 361-601 Стили для фото*/
+        margin: 0;
+        padding: 12px;
+        width: 220px;
+        height: 220px;
+    }
+    
+    h1 { /*361-601"Смирнова Юлия Анатольевна"*/
+        font-size: 40px;
+        line-height: 45px 
+    }
+    h2 {
+        font-size: 16px;
+    }
+    .my-name {
+        width: 250px;
+    }
+    .my-name__bracket {
+        margin: 0 30px 0 0;
+        width: 20px;
+        height: 220px;   
+    }
+}
+
+@media (min-width: 601px) { /*для 601 и больше, т.е. до 800*/
+    .gradient { /*Общий контейнер для всех элементов шапки*/
+        padding: 30px 0 0 30px;
+        height: 280px;
+    }
+    
+    .photo-bg {/*601-800 Контейнер для фото*/
+        width: 250px;
+        height: 250px;
+
+        position: absolute; /*Позиционирование фото относительно общего контейнера шапки*/
+        top: 30px;
+        left: 130px;
+    }
+    h1 { /*601-800"Смирнова Юлия Анатольевна"*/
+        margin-top: 10px;
+    }
+    .my-name__bracket {
+        margin: 0 30px 0 0;
+        width: 20px;
+        height: 140px;
+    }
+}
+
+@media (min-width: 801px) { /*для 801 и больше, т.е. до 1024*/
+    .gradient { /*Общий контейнер для всех элементов шапки*/
+        padding: 30px 0 0 30px;
+        height: 280px;
+    }
+    
+    .photo-bg {/*801-1024 Контейнер для фото*/
+        width: 250px;
+        height: 250px;
+
+        position: absolute; /*Позиционирование фото относительно общего контейнера шапки*/
+        top: 30px;
+        left: 130px;
+    }
+
+    h1 { /*801-1024"Смирнова Юлия Анатольевна"*/
+        margin-top: 35px;
+    }
+    .my-name {
+        width: auto;
+    }
+    .my-name__bracket {
+        margin: 0 30px 0 0;
+        width: 20px;
+        height: 140px;
+    }
+}
+
+@media (min-width: 1024px) { /*для 1024 и больше, т.е. до 1240*/   
+    .gradient { /*361-601 Фон шапки*/
+        padding: 30px 0 0 30px;
+        height: 330px;
+    }
+    
+    .logo-bg { /*1024-1240 Контейнер для логотипа*/
+        width: 125px;
+        height: 125px;
+    }
+
+    .logo { /*1024-1240 Стили для логотипа*/
+        padding: 16px;
+        width: 100px;
+        height: 100px;
+    }
+
+    .photo-bg {/*1024-1240 Контейнер для фото*/
+        width: 300px;
+        height: 300px;
+
+        position: absolute; /*Позиционирование фото относительно общего контейнера шапки*/
+        top: 30px;
+        left: 160px;
+    }
+
+    .photo { /* 1024-1240 Стили для фото*/
+        padding: 15px;
+        width: 262px;
+        height: 262px;
+    }
+
+    h1 { /*1024-1240"Смирнова Юлия Анатольевна"*/
+        margin-top: 40px;
+        font-size: 50px;
+        line-height: 55px   
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .my-name__bracket {
+        width: 30px;
+        height: 175px;
+    }
+}
+
+@media (min-width: 1240px) { /*для 1240 и больше*/  
+    .gradient { /*<1240 Фон шапки*/
+        padding: 50px 0 0 50px;
+        height: 425px;
+    }
+
+    .logo-bg { /*<1240 Контейнер для логотипа*/
+        width: 150px;
+        height: 150px;
+    }
+
+    .logo { /*<1240 Стили для логотипа*/
+        padding: 18px;
+        width: 120px;
+        height: 120px;
+    }
+
+    .photo-bg {/*<1240 Контейнер для фото*/
+        width: 375px;
+        height: 375px;
+
+        position: absolute; /*Позиционирование фото относительно общего контейнера шапки*/
+        top: 50px;
+        left: 200px;
+    }
+
+    .photo { /* <1240 Стили для фото*/
+        padding: 15px;
+        width: 330px;
+        height: 330px;
+    }
+    
+    h1 { /* <1240 "Смирнова Юлия Анатольевна"*/
+        margin-top: 50px;
+        font-size: 50px;
+        line-height: 55px   
+    }
+    h2 {
+        font-size: 20px;
+    }
+    .my-name__bracket {
+        width: 30px;
+        height: 200px;
+    }
+}
+
+/*СТИЛИ ДЛЯ КОНТЕНТА*/
+.main {
+    margin: 0;
+    padding: 0 35px;
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+}
+
+.main h3 { /*разделы сайта - заголовки*/
+    font-family: "BellotaText Bold", 'Times New Roman', Times, serif; 
+    color: #004781;
+    background-color: #ffffff;
+    font-size: 2em;
+    margin: 30px 0 20px 0;
+    padding: 0 10px 0 10px;
+    width: auto;
+}
+
+.main .quote { /*цитата*/
+    margin: 0 px;
+    padding: 10px 15px;
+    color: #004781;
+    background-color: rgba(48, 207, 208, 0.5);
+}
+blockquote {
+    margin: 0 0 0 10px;
+}
+
+.quote span { /*цитата*/
+    background-color: #ffffff;
+    font-family: "OpenSans Bold", Arial, Helvetica, sans-serif;
+    color: #30cfd0;
+    padding: 5px 10px;
+    line-height: 35px
+}
+
+.hr2 { /*цитата-линии*/
+    border: 1px solid rgb(255, 255, 255);
+    border-bottom-width: 0;
+}
+
+/*СТИЛИ ДЛЯ ПОДВАЛА*/
+.footer { /*Подвал*/
+    margin: 0;
+    padding: 35px;
+    display: flex;
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+}
+.footer__p { /*Копирайт в подвале*/
+    font-family: "OpenSans Regular", Arial, Helvetica, sans-serif;
+    padding: 0 0 0 35px ;
+}
+.footer-gradient { /*Градиентная полоса в подвале*/
+    background-image: linear-gradient(to right, #30cfd0 0%, #330867 100%);
+    background-repeat: no-repeat;
+    margin-top: 35px;
+    padding-top: 5px;
+}
+.footer__logo {
+    background-color: #ffffff;
+    border-radius: 50%;
+    padding: 13px;
+   
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
